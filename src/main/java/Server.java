@@ -14,7 +14,7 @@ public class Server {
         try {
             while (true) {
                 try {
-                    server = new ServerSocket(4004, 10, InetAddress.getByName("localhost/api")); // серверсокет прослушивает порт 4004
+                    server = new ServerSocket(4004); // серверсокет прослушивает порт 4004
                     System.out.println("Сервер запущен!"); // хорошо бы серверу
                     //   объявить о своем запуске
                     clientSocket = server.accept(); // accept() будет ждать пока
