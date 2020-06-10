@@ -27,6 +27,7 @@ public class Server {
                         out = new PrintWriter(clientSocket.getOutputStream());
 
                         String word = in.readLine(); // ждём пока клиент что-нибудь нам напишет
+                        System.out.println(word);
                         if (word != "GET /favicon.ico HTTP/1.1")
                         {
                             Service str = new Service();
