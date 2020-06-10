@@ -1,6 +1,4 @@
-
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 
 public class Service {
     // get key
@@ -8,7 +6,7 @@ public class Service {
         ArrayList<String> result = new ArrayList<String>();
 
         url = url.substring(url.indexOf('?')+1);
-        while (url != " ") {
+        while (!url.equals(" ")) {
 
             result.add(url.substring(0, url.indexOf('=')));
             if (url.indexOf('&') != -1)
@@ -23,7 +21,7 @@ public class Service {
         ArrayList<String> res = new ArrayList<String>();
 
         url = url.substring(url.indexOf('?')+1);
-        while (url != " ") {
+        while (!url.equals(" ")) {
 
             if (url.indexOf('&') != -1) {
                 res.add(url.substring(url.indexOf("=") + 1, url.indexOf('&')));
@@ -36,5 +34,4 @@ public class Service {
         }
         return res;
     }
-
 }
